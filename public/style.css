@@ -1,0 +1,132 @@
+/* General Page Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+}
+
+/* Header Layout */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #222;
+  color: white;
+  padding: 1rem 2rem;
+}
+
+/* Logo Text */
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Navbar Links */
+.navbar a {
+  color: white;
+  margin-left: 1rem;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  text-decoration: underline;
+}
+
+/* Blog Post Card Styling */
+.blog-post {
+  background: white;
+  padding: 1.5rem;
+  margin: 2rem auto;
+  max-width: 700px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s;
+}
+
+.blog-post:hover {
+  background-color: #f5f5f5;
+}
+
+/* Blog Link Styling */
+.blog-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* Blog Titles and Subtitles */
+.blog-post h1 {
+  margin: 0 0 0.5rem;
+}
+
+.blog-post h3 {
+  margin: 0 0 1rem;
+  color: #555;
+}
+
+/* Author Text */
+.author {
+  font-style: italic;
+  color: #777;
+}
+
+/* Add underline effect on hover */
+.blog-link:hover h1,
+.blog-link:hover h3,
+.blog-link:hover .author {
+  text-decoration: underline;
+}
+
+/* Edit/Delete Button Container */
+.actions {
+  margin-top: 1rem;
+}
+
+.actions form {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+/* Shared Submit Button Styling */
+input[type="submit"] {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Edit Button */
+input.edit-btn {
+  background-color: #007BFF;
+  color: white;
+}
+
+input.edit-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Delete Button */
+input.delete-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+input.delete-btn:hover {
+  background-color: #a71d2a;
+}
+
+/* New Post Button Section */
+.new-post {
+  margin: 0 2rem 2rem;
+  text-align: center;
+}
+
+.new-post input[type="submit"] {
+  background-color: #28a745;
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+}

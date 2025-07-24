@@ -1,3 +1,42 @@
-<%- include("partials/header.ejs") %>
+<%- include("partials/header") %>
 
-<h1>Hi</h1>
+<main>
+  <% // Show a placeholder if there are no blog posts %>
+  <% if (posts.length === 0) { %>
+    <section class="blog-post">
+      <h1>Blog Title</h1>
+      <h3>Sub Title</h3>
+      <p class="author">Author</p>
+    </section>
+  <% } else { %>
+    <% // Loop through all posts and display each one %>
+    <% posts.forEach((post) => { %>
+      <section class="blog-post">
+        <a href="/post/<%= post.id %>" class="blog-link">
+          <h1>Title: <%= post.title %></h1>
+          <h3>Subtitle: <%= post.subtitle %></h3>
+          <p class="author">Author: <%= post.author %></p>
+        </a>
+
+        <% // Each blog has its own edit and delete buttons %>
+        <div class="actions">
+          <form action="/edit-post/<%= post.id %>" method="GET">
+            <input type="submit" value="Edit Post" class="edit-btn" />
+          </form>
+          <form action="/delete-post/<%= post.id %>" method="POST">
+            <input type="submit" value="Delete Post" class="delete-btn" />
+          </form>
+        </div>
+      </section>
+    <% }) %>
+  <% } %>
+
+  <% // Button to create a new post %>
+  <section class="new-post">
+    <form action="/new-post" method="GET">
+      <input type="submit" value="New Post" />
+    </form>
+  </section>
+</main>
+</body>
+</html>
